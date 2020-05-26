@@ -1,0 +1,56 @@
+<html>
+<title >Abalone age prediction</title>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style/myapp31.css') }}">
+<!link rel="stylesheet" type="text/css" href="myapp23.css">
+
+</head>
+<body class="body1" > 
+<form  method="POST">
+  <div class="container">
+    <h1 align = 'center' style="color:black; font-size:50px" >profit prediction</h1>
+    <p align = 'center'style="font-size:25px">Please fill the following details of your state:</p>
+    <form action='/age' method="post">
+	<table align='center' style='padding:15px; border-spacing: 15px; font-size:20 px'>
+	<tr>
+    <td><label for="state"><b>state</b></label></td>
+    <td style = "vertical-align:middle">
+    <input type="radio" class="radion" name="s" value="Florida" required><b>Florida</b>
+	<input type="radio" class="radion" name="s" value="Us"  ><b>Us</b>
+	<input type="radio" class="radion" name="s" value="IN" ><b>IN</b>
+	</td>
+	</tr>
+	
+	<tr>
+    <td><label for="administrative spend"><b>administrative</b></label></td>
+    <td><input type="text" placeholder="Enter length" name="ad" id="rcorners1" required></td>
+	</tr>
+	
+	<tr>
+    <td><label for="marketing spend"><b>marketing</b></label></td>
+    <td><input type="text" placeholder="Enter diameter" name="ms" id="rcorners1" required></td>
+	</tr>	
+	
+	<tr>
+    <td><label for="reasearch"><b>research</b></label></td>
+    <td><input type="text" placeholder="Enter height" name="rd" id="rcorners1" required></td>
+	</tr>	
+	
+	
+	
+	<tr>
+	<td colspan="2" align="center" ><button class="button5" type="submit" name="predict" align='center' value="Predict" onclick="window.location.href = 'F:\Projects\Abalone\templates\abalone_predict1.html'" >Predict</button></td>
+	</tr>
+	</table>
+	</form>
+	<table align="center">
+	<tr>
+	<td><label for="age" style="font-size:23px"><b>profit</b></label></td>
+    <td style="font-size:23px"><b>{{ypred}} years</b></td>
+	</tr>
+
+	</table>
+    
+  </div>
+
+</form>
